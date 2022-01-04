@@ -1,0 +1,64 @@
+
+$primary-color: #0047AB;
+$LobsterFont:'Lobster',cursive;
+$PushsterFont:'Pushster', cursive;
+$VollkornFont: 'Volkorn', serif;
+$RanchersFont: 'Ranchers',cursive;
+
+@mixin padding-15{
+    padding:0 15px;
+}
+
+body, html {
+    scroll-behavior: smooth;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    transform-style: preserve-3d; 
+  }
+.mainSection{
+    height:100vh;
+    .bannerSection{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        
+        .bannerImg{
+            width:300px;   
+        }
+        .bannerText{
+        font-family: $LobsterFont;
+        font-size: 70px;
+        text-transform: lowercase;
+        color: $primary-color;
+        width:640px;
+        text-align: center;
+        // padding-top:130px;
+        }
+        
+    }
+   
+    
+}
+
+.experienceSection {
+    @include padding-15;
+    background-color: $primary-color;
+    height:30vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    .experienceText{
+        color:#fff;
+        font-family:$LobsterFont;
+        font-size:60px;
+        font-weight:100;
+    }
+
+}
