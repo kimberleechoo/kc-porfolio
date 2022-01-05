@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
+    "aos": "^2.3.4",
     "node-sass": "^7.0.1"
   },
   "devDependencies": {},
