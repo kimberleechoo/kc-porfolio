@@ -366,3 +366,10 @@ body, html {
     color:$primary-color;
   }
  
+  .contactMe{
+    display:flex;
+    justify-content: center;
+    img{
+        width: 50px;
+    }
+  }

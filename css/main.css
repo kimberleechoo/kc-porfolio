@@ -267,3 +267,9 @@ body, html {
   background-color: #FFF;
   border: #0047AB solid;
   color: #0047AB; }
+
+.contactMe {
+  display: flex;
+  justify-content: center; }
+  .contactMe img {
+    width: 50px; }
