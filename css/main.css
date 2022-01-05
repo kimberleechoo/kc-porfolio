@@ -1,10 +1,41 @@
+.small-container {
+  width: 600px; }
+  @media (max-width: 767px) {
+    .small-container {
+      width: 100%; } }
+
 body, html {
   scroll-behavior: smooth;
-  height: 100%;
   margin: 0;
   padding: 0;
   line-height: 1.5;
   transform-style: preserve-3d; }
+
+.navSection {
+  display: flex;
+  justify-content: center; }
+  .navSection .navbar {
+    background-color: #0047AB;
+    color: #FFF;
+    width: 600px;
+    height: 50px;
+    border-radius: 15px;
+    margin-top: 15px; }
+    @media (max-width: 767px) {
+      .navSection .navbar {
+        width: 300px; } }
+  .navSection ul.navLinks {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px; }
+    .navSection ul.navLinks li a {
+      font-size: 28px;
+      color: #FFF; }
+      .navSection ul.navLinks li a i:hover {
+        transform: scale(1.2); }
 
 .mainSection {
   height: 100vh; }
@@ -12,12 +43,16 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%); }
+    margin-top: 180px; }
+    @media (max-width: 767px) {
+      .mainSection .bannerSection {
+        flex-direction: column;
+        margin-top: 30px; } }
     .mainSection .bannerSection .bannerImg {
       width: 300px; }
+      @media (max-width: 767px) {
+        .mainSection .bannerSection .bannerImg {
+          width: 260px; } }
     .mainSection .bannerSection .bannerText {
       font-family: "Lobster", cursive;
       font-size: 70px;
@@ -25,9 +60,12 @@ body, html {
       color: #0047AB;
       width: 640px;
       text-align: center; }
+      @media (max-width: 767px) {
+        .mainSection .bannerSection .bannerText {
+          width: 100%;
+          font-size: 40px; } }
 
 .experienceSection {
-  padding: 0 15px;
   background-color: #0047AB;
   height: 30vh;
   display: flex;
@@ -38,3 +76,29 @@ body, html {
     font-family: "Lobster", cursive;
     font-size: 60px;
     font-weight: 100; }
+
+.aboutMe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Volkorn", serif;
+  color: #0047AB;
+  font-size: 28px;
+  text-align: justify;
+  letter-spacing: -1.5px; }
+  .aboutMe img {
+    width: 100px;
+    margin-top: 15px; }
+
+.cvDetails {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .cvDetails .cvInfo {
+    font-family: "Volkorn", serif;
+    color: #0047AB;
+    font-size: 25px;
+    text-align: justify;
+    letter-spacing: -1.5px; }
+  .cvDetails img {
+    width: 100px; }
