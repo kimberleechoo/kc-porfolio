@@ -30,13 +30,17 @@ body, html {
     .navbar{
         background-color: $primary-color;
         color:#FFF;
-        width:600px;
+        width:800px;
         height:50px;
         border-radius: 15px;
         margin-top:15px;
 
         @media(max-width:767px){
-            width:300px;
+            width:300px !important;
+        }
+
+        @media(max-width:1024px){
+            width:650px;
         }
     }
     
@@ -261,8 +265,14 @@ body, html {
     margin-right:35px;
     @media(max-width:767px){
         margin-top:40px;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
         margin-bottom:40px;
+    }
+    @media(max-width:1024px){
+        margin-top:40px;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom:40px;
+        align-content:center;
     }
   }
   
