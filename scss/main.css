@@ -115,10 +115,12 @@ body, html {
   }
 }
 .experienceSection .experienceText {
-  color: #fff;
+  color: #fff0;
   font-family: "Lobster", cursive;
   font-size: 60px;
   font-weight: 100;
+  -webkit-text-stroke: 1px #FFF;
+  -webkit-text-fill-color: transparent;
 }
 @media (max-width: 767px) {
   .experienceSection .experienceText {
@@ -233,6 +235,8 @@ body, html {
   font-family: "Lobster", cursive;
   font-size: 60px;
   font-weight: 100;
+  -webkit-text-stroke: 1.5px #0047AB;
+  -webkit-text-fill-color: transparent;
 }
 
 .box-container {
