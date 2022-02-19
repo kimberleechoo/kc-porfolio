@@ -1,21 +1,27 @@
 
-$primary-color: #0047AB;
+$primary-color: #0047ab;
+$secondary-color: #3e3e3e;
+$cuteYellow: #f8e991ba;
 $LobsterFont:'Lobster',cursive;
 $PushsterFont:'Pushster', cursive;
 $VollkornFont: 'Volkorn', serif;
 $RanchersFont: 'Ranchers',cursive;
-
+$PoppinsFont: 'Poppins', sans-serif;
 @mixin padding-15{
     padding:0 15px;
 }
+
+
 .small-container{
-    width:600px;
+    width:900px;
+    padding: 20px 0;
     
 
     @media(max-width:767px){
         width:350px;
     }
 }
+
 body, html {
     scroll-behavior: smooth;
     // height: 100%;
@@ -23,6 +29,13 @@ body, html {
     padding: 0;
     line-height: 1.5;
     transform-style: preserve-3d; 
+    
+    
+  }
+  
+  body{
+    // min-height:100%;
+    overflow-y:scroll;
   }
 .navSection{
     display:flex;
@@ -57,20 +70,26 @@ body, html {
             font-size:28px;
             color: #FFF;
 
-            i:hover{
-                transform: scale(1.2);
-            }
+            
+        }
+        svg:hover{
+            transform: scale(1.2);
         }
     }
 
 }
+.note{
+    color: white;
+    background-color:$primary-color;
+}
 .mainSection{
-    height:100vh;
+    height:65vh;
     .bannerSection{
         display:flex;
         justify-content: center;
         align-items: center;
         margin-top:180px;
+        flex-flow:row-reverse;
         // position: fixed;
         // // left: 50%;
         // top: 50px;
@@ -82,39 +101,146 @@ body, html {
         
         .bannerImg{
             width:300px;   
-            @media(max-width:767px){
-                width:260px;
+            @media(min-width:320px) and (max-width:767px){
+                width:260px !important;
             }
 
             @media(max-width:1023px){
                 width:300px;
             }
         }
+        .bannerTextWrapper{
+            @media(max-width: 767px){
+                margin: 5px;
+            }
+        }
         .bannerText{
-        font-family: $VollkornFont;
-        font-weight:700;
-        font-size: 80px;
-        text-transform: lowercase;
-        color: $primary-color;
+        font-family: $PoppinsFont;
+        font-weight:600;
+        font-size: 50px;
+        color: $secondary-color;
         width:640px;
-        text-align: center;
+        text-align: justify;
         // padding-top:130px;
-        @media(max-width:767px){
+        @media(min-width:320px) and (max-width:767px){
             width:100%;
-            font-size:45px;
+            font-size:30px !important;
+            text-align: center;
         }
 
         @media(max-width:1023px){
             width:100%;
-            font-size:45px;
+            font-size:40px;
+        }
+
+        .bannerSubText{
+                overflow: hidden; /* Ensures the content is not revealed until the animation */
+                border-right: .15em solid $cuteYellow; /* The typwriter cursor */
+                white-space: nowrap; /* Keeps the content on a single line */
+                margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+                animation: 
+                    typing 3.5s steps(40, end),
+                    blink-caret .75s step-end infinite;
+              
+              
+              /* The typing effect */
+              @keyframes typing {
+                from { width: 0 }
+                to { width: 100% }
+              }
+              /* The typewriter cursor effect */
+              @keyframes blink-caret {
+                from, to { border-color: transparent }
+                50% { border-color: $cuteYellow; }
+              }
+            font-size:30px;
+            @media(max-width:767px){
+                font-size:22px;
+            }
         }
         }
         
     }
-   
+}
+.small-container-about{
+    width:650px;
+    padding: 20px 0;
+    
+
+    @media(max-width:767px){
+        width:350px;
+    }
+
+    &.roundedGrid{
+        margin-top:30px;
+        margin-bottom:10px;
+        display:flex;
+        // flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @media(max-width:1024px){
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .aboutPoints{
+            padding: 15px;
+            margin: 10px 15px;
+            background-color: $cuteYellow;
+            border-radius: 15px;
+            width:200px;
+            height:70px;
+            display:flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            span{
+                color: $secondary-color;
+                font-family: $PoppinsFont;
+                font-size:15px !important;
+                
+            }
+        }
+
+        
+    }
+
     
 }
-
+.aboutMyself{
+    color:$secondary-color;
+    font-size:20px;
+    font-family: $PoppinsFont;
+    line-height: 1.75;
+    .cuteNote{
+        background-color:$cuteYellow;
+    }
+}
+.aboutMe
+{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-family:$VollkornFont;
+    color:$primary-color;
+    font-size:28px;
+    text-align: justify;
+    letter-spacing: -1.5px;
+    @media(max-width:767px){
+        margin-left:30px;
+        margin-right:30px;
+        font-size:23px;
+        .small-container span{
+            font-size:30px !important;
+        }
+    }
+    img{
+    width:130px;
+    margin-top:15px;
+    
+}
+    
+}
 .experienceSection {
     background-color: $primary-color;
     height:30vh;
@@ -139,29 +265,15 @@ body, html {
  
 }
 
-.aboutMe
-{
+.cvInfo{
     display:flex;
-    align-items: center;
+    flex-direction: row;
+    column-gap: 15px;
     justify-content: center;
-    font-family:$VollkornFont;
-    color:$primary-color;
-    font-size:28px;
-    text-align: justify;
-    letter-spacing: -1.5px;
-    @media(max-width:767px){
-        margin-left:30px;
-        margin-right:30px;
-        font-size:23px;
-        .small-container span{
-            font-size:30px !important;
-        }
+    align-items: center;
+    @media(max-width:1023px){
+        flex-direction: column;
     }
-    img{
-    width:130px;
-    margin-top:15px;
-    
-}
 }
 .cvDetails{
         display:flex;
@@ -169,10 +281,12 @@ body, html {
         justify-content: center;
         flex-direction:column;
         margin-top:10px;
+
+        
     .cvInfo .date{
         font-family:$VollkornFont;
         color:$primary-color;
-        font-size:20px;
+        font-size:10px;
         // text-align: center;
         letter-spacing: -1.5px;
         @media(max-width:767px){
@@ -194,20 +308,25 @@ body, html {
     }
     .pdfDownload {
         margin-top:15px;
+        :hover{
+            color:$secondary-color;
+        }
     }
     a {
         color:$primary-color;
         text-decoration: none;
         font-size:12px;
-        font-family: $VollkornFont;
-        font-weight:600;
+        font-family: $PoppinsFont;
+        // font-weight:600;
         // margin-top:15px;
+
+        
     }
     .cvDetailInfo p{
-        font-family:$VollkornFont;
-        color:$primary-color;
-        font-size:15px;
-        margin:0;
+        font-family:$PoppinsFont;
+        color:$secondary-color;
+        font-size:14px;
+        margin-top:10px;
         padding:0;
     }
     hr.divider{
@@ -222,8 +341,13 @@ body, html {
 .experienceCards{
     border: 2px solid $primary-color;
     border-radius: 25px 10px;
-    padding: 30px;
+    padding: 15px;
     margin-top:25px;
+    width:300px;
+    height: 400px;
+@media(max-width:1023px){
+    height:200px;
+}
 
 }
 .portfolio {
@@ -289,7 +413,7 @@ body, html {
     }
   }
   
-  .box {
+    .box {
     position:relative;
     width:300px;
     height:400px;
@@ -298,74 +422,74 @@ body, html {
     box-shadow:5px 2px 11px 2px rgba(0,0,0,.3);
     overflow:hidden;
     transition:.2s ease-in-out;
-    
+
     &:hover {
-      transform: scale(1.1);
-      box-shadow:8px 5px 6px 2px rgba(0,0,0,.1);
+        transform: scale(1.1);
+        box-shadow:8px 5px 6px 2px rgba(0,0,0,.1);
     }
-    
+
     @media(min-width:1200px){
         &.boxDown{
             position:relative; 
             top:20px;
         }
     }
-    
-    
+
+
     img {
-      height:100%;
-      width:100%;
-      object-fit:cover;
+        height:100%;
+        width:100%;
+        object-fit:cover;
     }
-    
+
     .caption {
-      position:absolute;
-      bottom:0;
-      left:0;
-      right:0;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      border-bottom-left-radius:inherit;
-      border-bottom-right-radius:inherit;
-      & > * {
+        position:absolute;
+        bottom:0;
+        left:0;
+        right:0;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        border-bottom-left-radius:inherit;
+        border-bottom-right-radius:inherit;
+        & > * {
         padding:.9rem 1rem;
-      }
-      
-      .content {
+        }
+        
+        .content {
         display:flex;
         flex-direction:column;
         gap:.2rem;
         
         span {
-          font-size: 1.3rem;
-          text-transform: lowercase;
-          letter-spacing: 1;
+            font-size: 1.3rem;
+            text-transform: lowercase;
+            letter-spacing: 1;
         //   font-weight:bold;
         }
         small {
-          font-size:12px;
-          letter-spacing: 1.5;
-          font-family: $VollkornFont;
+            font-size:12px;
+            letter-spacing: 1.5;
+            font-family: $VollkornFont;
         }
-      }
-     
+        }
+        
     }
-  }
-  @media(min-width:1200px){
+    }
+    @media(min-width:1200px){
     .box-container > .box {
         flex:20%;
     }
-  }
-  
-  .box1{
+    }
+
+    .box1{
     .caption {
         background:#ffffff;
         color:$primary-color;
     }
-  }
-  
-  #topButton {
+    }
+
+    #topButton {
     display: none;
     position: sticky;
     bottom: 20px;
@@ -373,26 +497,26 @@ body, html {
     z-index: 99;
     font-size: 18px;
     border: none;
-    width:50px;
-    height:50px;
+    width:35px;
+    height:35px;
     outline: none;
     background-color: #0047AB42;
     color:#FFF;
     cursor: pointer;
-    padding: 15px;
+    // padding: 15px;
     border-radius: 50%;
-  }
-  
-  #topButton:hover {
+    }
+
+    #topButton:hover {
     background-color: #FFF;
     border:$primary-color solid;
     color:$primary-color;
-  }
- 
-  .contactMe{
+    }
+
+    .contactMe{
     display:flex;
     justify-content: center;
     img{
-        width: 50px;
+        width: 60px;
     }
-  }
+    }
