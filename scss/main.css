@@ -47,20 +47,47 @@ body {
   padding: 0;
   list-style-type: none;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   padding: 10px 15px;
 }
 .navSection ul.navLinks li a {
   font-size: 28px;
   color: #FFF;
 }
+.navSection ul.navLinks .linksWrapper {
+  display: flex;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  font-family: "Volkorn", serif;
+  font-weight: 100;
+}
+.navSection ul.navLinks .linksWrapper li a {
+  text-decoration: none;
+}
 .navSection ul.navLinks svg:hover {
   transform: scale(1.2);
 }
+@media (max-width: 767px) {
+  .navSection #linksAnchor {
+    display: none;
+  }
+}
+.navSection #linksAnchor li a {
+  font-size: 20px;
+}
+.navSection #linksAnchor a:hover {
+  font-size: 21px;
+}
 
 .note {
-  color: white;
-  background-color: #0047ab;
+  color: #0047ab;
+  background-color: #FFF;
+}
+
+.cuteNote {
+  background-color: #f8e991ba;
 }
 
 .mainSection {
@@ -73,7 +100,7 @@ body {
   margin-top: 180px;
   flex-flow: row-reverse;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .mainSection .bannerSection {
     flex-direction: column;
     margin-top: 30px;
@@ -217,9 +244,6 @@ body {
   font-size: 20px;
   font-family: "Poppins", sans-serif;
   line-height: 1.75;
-}
-.aboutMyself .cuteNote {
-  background-color: #f8e991ba;
 }
 
 .aboutMe {
@@ -415,8 +439,8 @@ body {
 
 .box {
   position: relative;
-  width: 300px;
-  height: 400px;
+  width: 250px;
+  height: 300px;
   background: #fff;
   border-radius: 1rem;
   box-shadow: 5px 2px 11px 2px rgba(0, 0, 0, 0.3);
@@ -459,14 +483,17 @@ body {
   gap: 0.2rem;
 }
 .box .caption .content span {
-  font-size: 1.3rem;
+  font-size: 15px;
   text-transform: lowercase;
   letter-spacing: 1;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
 }
 .box .caption .content small {
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 1.5;
-  font-family: "Volkorn", serif;
+  font-family: "Poppins", sans-serif;
+  color: #3e3e3e;
 }
 
 @media (min-width: 1200px) {
