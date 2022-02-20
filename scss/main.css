@@ -52,6 +52,11 @@ body {
   align-items: center;
   padding: 10px 15px;
 }
+@media (max-width: 767px) {
+  .navSection ul.navLinks {
+    justify-content: center;
+  }
+}
 .navSection ul.navLinks li a {
   font-size: 28px;
   color: #FFF;

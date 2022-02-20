@@ -67,7 +67,9 @@ body, html {
         justify-content:space-between;
         align-items: center;
         padding:10px 15px;
-
+        @media(max-width:767px){
+            justify-content: center;
+        }
         li a  {
             font-size:28px;
             color: #FFF;
