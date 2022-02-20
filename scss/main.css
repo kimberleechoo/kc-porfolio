@@ -532,6 +532,10 @@ body {
   place-content: center;
   align-items: center;
 }
+#topButton i {
+  margin: 0;
+  padding: 0;
+}
 
 #topButton:hover {
   background-color: #FFF;
