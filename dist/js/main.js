@@ -7,7 +7,7 @@ function scrollFunction() {
     var mybutton = document.getElementById("topButton");
   if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
    console.log('button :>> ', );
-    mybutton.style.display = "block";
+    mybutton.style.display = "flex";
   } else {
     mybutton.style.display = "none";
   }

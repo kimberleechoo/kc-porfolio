@@ -543,8 +543,9 @@ body, html {
     // padding: 15px;
     border-radius: 50%;
     margin:15px;
-    place-content: center;
     align-items: center;
+    justify-content: center;
+    align-content: center;
 
     i{
         margin:0;
