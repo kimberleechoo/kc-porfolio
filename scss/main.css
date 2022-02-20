@@ -529,6 +529,8 @@ body {
   cursor: pointer;
   border-radius: 50%;
   margin: 15px;
+  place-content: center;
+  align-items: center;
 }
 
 #topButton:hover {
