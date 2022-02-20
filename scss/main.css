@@ -72,8 +72,8 @@ body {
 .navSection ul.navLinks .linksWrapper li a {
   text-decoration: none;
 }
-.navSection ul.navLinks svg:hover {
-  transform: scale(1.2);
+.navSection ul.navLinks i:hover {
+  font-size: 32px;
 }
 @media (max-width: 767px) {
   .navSection #linksAnchor {

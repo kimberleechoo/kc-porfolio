@@ -86,8 +86,12 @@ body, html {
                 text-decoration: none;
             }
         }
-        svg:hover{
-            transform: scale(1.2);
+        // svg:hover{
+        //     transform: scale(1.2);
+        // }
+
+        i:hover{
+            font-size:32px;
         }
     }
  
