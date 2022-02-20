@@ -517,17 +517,18 @@ body {
   position: -webkit-sticky;
   position: sticky;
   bottom: 20px;
-  left: 93%;
+  left: 90%;
   z-index: 99;
   font-size: 18px;
   border: none;
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   outline: none;
   background-color: #0047AB42;
   color: #FFF;
   cursor: pointer;
   border-radius: 50%;
+  margin: 15px;
 }
 
 #topButton:hover {
