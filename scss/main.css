@@ -93,7 +93,7 @@ body {
 }
 
 .cuteNote {
-  background-color: #f8e991ba;
+  background-color: rgba(248, 233, 145, 0.7294117647);
 }
 
 .mainSection {
@@ -154,7 +154,7 @@ body {
 .mainSection .bannerSection .bannerText .bannerSubText {
   overflow: hidden;
   /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid #f8e991ba;
+  border-right: 0.15em solid rgba(248, 233, 145, 0.7294117647);
   /* The typwriter cursor */
   white-space: nowrap;
   /* Keeps the content on a single line */
@@ -187,7 +187,7 @@ body {
     border-color: transparent;
   }
   50% {
-    border-color: #f8e991ba;
+    border-color: rgba(248, 233, 145, 0.7294117647);
   }
 }
 @keyframes blink-caret {
@@ -195,7 +195,7 @@ body {
     border-color: transparent;
   }
   50% {
-    border-color: #f8e991ba;
+    border-color: rgba(248, 233, 145, 0.7294117647);
   }
 }
 @media (max-width: 767px) {
@@ -230,7 +230,7 @@ body {
 .small-container-about.roundedGrid .aboutPoints {
   padding: 15px;
   margin: 10px 15px;
-  background-color: #f8e991ba;
+  background-color: rgba(248, 233, 145, 0.7294117647);
   border-radius: 15px;
   width: 200px;
   height: 70px;
@@ -363,7 +363,7 @@ body {
   padding: 0;
 }
 .cvDetails hr.divider {
-  border-top: solid #0047AB42 0.5px;
+  border-top: solid rgba(0, 71, 171, 0.2588235294) 0.5px;
   margin-top: 25px;
 }
 .cvDetails img {
@@ -524,7 +524,7 @@ body {
   width: 40px;
   height: 40px;
   outline: none;
-  background-color: #0047AB42;
+  background-color: rgba(0, 71, 171, 0.2588235294);
   color: #FFF;
   cursor: pointer;
   border-radius: 50%;
@@ -546,8 +546,12 @@ body {
 
 .contactMe {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  color: #0047ab;
 }
 .contactMe img {
-  width: 60px;
+  width: 50px;
 }/*# sourceMappingURL=main.css.map */
