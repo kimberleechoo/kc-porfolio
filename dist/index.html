@@ -224,7 +224,7 @@
         <div class="portfolioSection">
                     <h1 class="portfolioText">portfolio</h1>
         </div>
-        <div data-aos="zoom-in-up" data-aos-easing="ease-in-out"  data-aos-duration="1000" data-aos-delay="50">
+        <div data-aos="zoom-in-up" data-aos-easing="ease-in-out"  data-aos-duration="1000" data-aos-delay="50" style="min-height: 100vh;">
             <div class="box-container">
                 <div class="box box1">
                     <div class="border"></div>
@@ -270,11 +270,46 @@
                     
                     </div>
                 </div>
-            </div>    
+                <div onclick="popUpFunc()" class="box box1" style="cursor:pointer">
+                    <div class="border"></div>
+                    <a>
+                        <img src="/dist/assets/uiSoy.PNG">
+                    </a>
+                    <div class="caption">
+                        <div class="content">
+                            <span>redesign e-commerce website</span>
+                            <small>ui/ux</small>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div> 
+             
         </div>
             
     </div>
-    
+    <!-- modal  -->
+    <div id="popUpModal" class="modal">
+        <form class="modal-content animate" id="soyForm">
+            <div>
+                <span onclick="closePopUp()" class="close" title="Close Modal">&times;</span>
+            </div>
+        
+            <div class="container">
+                <p>This is a password protected file, please send me an email for access 😊</p>
+                <label for="psw" id="passwordLabel"><b>Password</b></label>
+                <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username" autocomplete="new-user" style="display:none;">
+                <input id="soyPassword" type="password" placeholder="Enter Password" name="pass" autocomplete="new-password" required>
+                <div class="errorMessageHolder">
+                    <p id="soyFormErrorMsg">Oops, password is incorrect 😢</p>
+                    <p id="soyFormEmptyMsg">Please enter password 😎</p>
+                </div>
+                <button onclick="submitFormButton(this.form); return false;" id="soySubmitButton" type="submit" value="Access">Access</button>
+            
+            </div>
+        
+        </form>
+    </div>
     <!-- footer  -->
     <div class="contactMe">
         <img src="/dist/assets/peace.png" alt="">
@@ -305,10 +340,12 @@
             delay: 50, // values from 0 to 3000, with step 50ms
             duration: 1000, // values from 0 to 3000, with step 50ms
             // easing: 'ease',
-          
-           
-          
-          });
+        
+        
+        
+        });
+
+
     </script>
     
     
