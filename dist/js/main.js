@@ -1,6 +1,16 @@
 
+function resetScrollPosition() {
+    window.scrollTo(0, 0);
+}
 
-// When the user scrolls down 20px from the top of the document, show the button
+window.onload = function() {
+    resetScrollPosition();
+};
+
+window.addEventListener('load', function() {
+    resetScrollPosition();
+});
+
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -42,7 +52,7 @@ const submitEmptyError = document.getElementById('soyFormEmptyMsg')
       submitEmptyError.style.display = "none"
       if(soyPassword === "hellow0rld();"){
         submitError.style.display = "none"
-        window.location.href="https://www.google.com"
+        window.location.href="https://xd.adobe.com/view/80562497-9997-42fb-acd7-4330a449666a-d505/screen/c5efe0c2-671a-4592-8c53-83517c572e5b?fullscreen"
         return true
         } else {
           submitError.style.display = "block"
@@ -63,7 +73,6 @@ function closePopUp(){
   modalPopUp.style.display = "none";
   docBody.style.overflowY = "scroll"
 }
-
 
 
 
