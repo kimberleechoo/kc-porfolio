@@ -50,7 +50,7 @@ const submitEmptyError = document.getElementById('soyFormEmptyMsg')
   
     if(soyPassword.length !== 0){
       submitEmptyError.style.display = "none"
-      if(soyPassword === "hellow0rld();"){
+      if(soyPassword === "nopassword!"){
         submitError.style.display = "none"
         window.location.href="https://xd.adobe.com/view/80562497-9997-42fb-acd7-4330a449666a-d505/screen/c5efe0c2-671a-4592-8c53-83517c572e5b?fullscreen"
         return true
