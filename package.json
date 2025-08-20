@@ -6,14 +6,15 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
     "aos": "^2.3.4",
-    "node-sass": "^7.0.1",
     "rellax": "^1.12.1"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass --watch scss -o css"
+    "scss": "sass --watch scss:css"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.90.0"
+  }
 }
