@@ -2,7 +2,7 @@
   "name": "kc",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
     "aos": "^2.3.4",
